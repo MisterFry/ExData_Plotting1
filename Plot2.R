@@ -42,7 +42,9 @@ raw$dateTime = strptime(raw$dateTime,
 raw$Global_active_power <- as.numeric(raw$Global_active_power)
 
 #write the plot to png 
-png('Plot2.png')
+png('Plot2.png',
+    width = 480, 
+    height = 480)
 plot(x = raw$dateTime, 
      y = raw$Global_active_power,
      type = 'l',

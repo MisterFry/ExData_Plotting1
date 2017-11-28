@@ -41,7 +41,9 @@ raw$dateTime = strptime(raw$dateTime,
 fieldsToConvert <- c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3')
 raw[fieldsToConvert] <- sapply(raw[fieldsToConvert], as.numeric)
 
-png('Plot3.png')
+png('Plot3.png',
+    width = 480, 
+    height = 480)
 #plotting multiple lines, but they have a common value range. So, plot the first one
 #the first one being the one with the largest Y value. 
 plot(y = raw$Sub_metering_1, 

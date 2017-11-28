@@ -48,7 +48,9 @@ raw$Voltage <- as.double(raw$Voltage)
 raw$Global_reactive_power <- as.double(raw$Global_reactive_power)
 
 #write the multipart chart
-png('Plot4.png')
+png('Plot4.png',
+    width = 480, 
+    height = 480)
 par(mfcol=c(2,2))
 #plotting multiple lines, but they have a common value range. So, plot the first one
 #the first one being the one with the largest Y value. 
